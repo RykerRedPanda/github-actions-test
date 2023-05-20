@@ -31,5 +31,5 @@ jobs:
           file: ./Dockerfile_prod
           push: true
           tags: |
-            rykerredpanda
+            rykerredpanda/test-repo
           
