@@ -1,9 +1,10 @@
 name: gha_basic:GitHub Action flow to Docker hub 
 
 on:
+ push:
 #  workflow_dispatch:
-  push:
-    branches: [main]
+
+
 
 jobs:
   build-push-images:
