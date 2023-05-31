@@ -1,7 +1,6 @@
 name: gha_basic:GitHub Action flow to Docker hub 
 
-on:
- push:
+on: [push]
 
 
 
