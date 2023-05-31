@@ -1,6 +1,7 @@
 name: gha_example:GitHub Action exercise 
 
 on:
+  workflow_dispatch:
   # push:
   #   branches:
   #     - 'main'
