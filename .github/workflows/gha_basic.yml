@@ -1,10 +1,7 @@
 name: gha_basic:GitHub Action flow to Docker hub 
 
-on:   
-    push:
-        branches:
-          - 'main'
-
+on: [push] 
+    
 jobs:
   build-push-images:
     name: Budowa i publikacja obrazw na repozytorium
