@@ -1,9 +1,9 @@
 name: gha_example:GitHub Action exercise 
 
 on:
-  push:
-    branches:
-      - 'main'
+  # push:
+  #   branches:
+  #     - 'main'
 
 jobs:
   build:
