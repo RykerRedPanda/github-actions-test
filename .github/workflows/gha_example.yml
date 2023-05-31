@@ -1,9 +1,11 @@
 name: gha_example:GitHub Action exercise 
 
 on:
-  push:
-    branches:
-      - 'main'
+ workflow_dispatch:
+
+  # push:
+  #   branches:
+  #     - 'main'
 
 jobs:
   build:
