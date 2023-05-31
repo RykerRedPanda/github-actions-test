@@ -3,7 +3,7 @@ name: gha_basic:GitHub Action flow to Docker hub
 on: [push] 
     
 jobs:
-  build:
+  build-push-images:
     # Definicja systemu do instalacji na węźle roboczym 
     runs-on: ubuntu-latest
     
@@ -26,14 +26,22 @@ jobs:
 
       # Budowa obrazu dla dwóch architektur sprzętowych 
       # oraz przesłanie do własnego repo na Dockerhub
-      - name: Build and push
+      # - name: Build and push
+      #   uses: docker/build-push-action@v3
+      #   with:
+      #     # platforms: linux/arm64/v8,linux/amd64 
+      #     context: ./
+      #     file: ./Dockerfile_prod
+      #     push: true
+      #     tags: |
+      #       rykerredpanda/test-repo
+      
+       - name: Build and push
         uses: docker/build-push-action@v3
         with:
-          # platforms: linux/arm64/v8,linux/amd64 
           context: ./
           file: ./Dockerfile_prod
           push: true
           tags: |
             rykerredpanda/test-repo
-      
           
