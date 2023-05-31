@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    # Definicja systemu do instalacji na wźle roboczym 
+    # Definicja systemu do instalacji na węźle roboczym 
     runs-on: ubuntu-latest
     
     steps:
@@ -27,16 +27,7 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-
-    - name: Build and push
-        uses: docker/build-push-action@v3
-        with:
-          context: ./
-          file: ./Dockerfile_prod
-          push: true
-          tags: |
-            rykerredpanda/test-repo
-      # Budowa obrazu dla dwóch architektur sprzętowych 
+    # Budowa obrazu dla dwóch architektur sprzętowych 
       # oraz przesłanie do własnego repo na Dockerhub
       # - name: Build and push
       #   uses: docker/build-push-action@v3
@@ -47,4 +38,15 @@ jobs:
       #     push: true
       #     tags: |
       #       rykerredpanda/test-repo
+      
+    - name: Build and push
+        uses: docker/build-push-action@v3
+        with:
+          context: ./
+          file: ./Dockerfile_prod
+          push: true
+          tags: |
+            rykerredpanda/test-repo
+
+  
       
