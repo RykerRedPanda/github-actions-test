@@ -3,11 +3,11 @@ name: gha_basic:GitHub Action flow to Docker hub
 on: [push] 
     
 jobs:
-  build-push-images:
-    name: Budowa i publikacja obrazw na repozytorium
+  build:
+    # Definicja systemu do instalacji na węźle roboczym 
     runs-on: ubuntu-latest
-
-   steps:
+    
+    steps:
 
       # Instalacja środowiska Docker + Buildx
       - name: Buildx set-up
@@ -35,4 +35,5 @@ jobs:
           push: true
           tags: |
             rykerredpanda/test-repo
+      
           
