@@ -7,7 +7,7 @@ on:
       - 'main'
 
 jobs:
-  build:
+  build-push-images:
     # Definicja systemu do instalacji na wźle roboczym 
     runs-on: ubuntu-latest
     
