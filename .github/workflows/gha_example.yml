@@ -1,8 +1,6 @@
 name: gha_example:GitHub Action exercise 
 
 on:
- workflow_dispatch:
-
   push:
     branches:
       - 'main'
@@ -39,5 +37,5 @@ jobs:
           file: ./Dockerfile_prod
           push: true
           tags: |
-            spg51/lab:ghlab10extended
+            rykerredpanda/test-repo
       
